@@ -40,9 +40,8 @@ class StringTest {
 		/** Example 2 */
 		
 		int length = "ABCD".length();
+		
 		//assert that length == 4. Without this assertion THIS TEST WILL SUCCEED even if .length actually returned 3 for example!
-		
-		
 		
 	}
 
