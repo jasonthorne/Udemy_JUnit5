@@ -26,7 +26,7 @@ class StringTest {
 		
 		/** checks MUST be implemented for test to be achieved. Checks are called ASSERTIONS. (like fail() above)*/
 		
-		/**Example 1:
+		/**------------- Example 1 ---------------------------------------------------------:
 		 * 
 		 * 1: invoke a method that returns square root of 4
 		 * eg: square(4); 
@@ -36,11 +36,18 @@ class StringTest {
 		 * 
 		 */
 		
-		/** Example 2 */
+		/**-------------- Example 2 ---------------------------------------------------------*/
 		
-		int length = "ABCD".length();
+		int actualLength = "ABCD".length(); //actual output
+		int expectedLength = 4; //expected output
+		
+		/** once you have an actual output AND and expected output, then you can write assertions on them */
+		
+		//this assertion checks that both values are equal:
+		assertEquals(expectedLength, actualLength); /** put in expected THEN actual */
+		
+		
 		//assert that length == 4. Without this assertion THIS TEST WILL SUCCEED even if .length actually returned 3 for example!
-		
 		
 		
 	}
