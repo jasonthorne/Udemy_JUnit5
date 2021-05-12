@@ -80,7 +80,15 @@ class StringTest {
 	}
 	
 	
-	
+	@Test
+	void assertionsForArrays() {
+		
+		String str = "abc def jhi";
+		String [] actualResult = str.split(" ");
+		String [] expectedResult = new String[] {"abc", "def", "jhi"};
+		
+		assertArrayEquals(expectedResult, actualResult);
+	}
 	
 	
 }
