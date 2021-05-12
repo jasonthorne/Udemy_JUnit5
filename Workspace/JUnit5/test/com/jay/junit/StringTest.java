@@ -17,7 +17,7 @@ class StringTest {
 
 	@Test //this annotation is what makes this a test method - NOT the method name
 	//comes from: import org.junit.jupiter.api.Test;
-	void test() {
+	void testExample1() {
 		
 		//this test fails when run as fail is passed "not yet implemented"
 		/** if fail is REMOVED then test is successs. i.e ABSENCE OF FAIL GIVES SUCCESS */
@@ -36,7 +36,10 @@ class StringTest {
 		 * 
 		 */
 		
-		/**-------------- Example 2 ---------------------------------------------------------*/
+	}
+	
+	@Test
+	void lengthTest() {
 		
 		int actualLength = "ABCD".length(); //actual output
 		int expectedLength = 4; //expected output
@@ -48,7 +51,36 @@ class StringTest {
 		
 		
 		//assert that length == 4. Without this assertion THIS TEST WILL SUCCEED even if .length actually returned 3 for example!
-		
-		
 	}
+	
+	
+	@Test
+	void toUpperCaseTest() {
+		
+		String string = "abcd";
+		String result = string.toUpperCase();
+		assertEquals("ABCD", result); //assert that result is uppercase
+		
+		assertNotNull(result); //assert that result ISNT null
+		//// assertNull(result); //assert that result IS null - this obv fails!
+	}
+	
+
+	@Test
+	void contains() {
+		
+		String string = "abcdefgh";
+		boolean result = string.contains("ijk");
+		assertEquals(false, result); //check that result is false
+		//assertEquals(true, result); //check that result is true - this obv fails!
+		
+		/** better way than essertEquals for booleans: */
+		assertFalse(result);
+		//assertTrue(result); - this obv fails!
+	}
+	
+	
+	
+	
+	
 }

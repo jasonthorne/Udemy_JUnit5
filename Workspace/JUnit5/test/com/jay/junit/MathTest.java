@@ -15,7 +15,6 @@ class MathTest {
 		
 		int expectedMin = num1; //expected output
 		int actualMin = Math.min(num1, num2); //actual output
-		
 		assertEquals(expectedMin, actualMin); /** put in expected THEN actual */
 	}
 	
@@ -25,7 +24,6 @@ class MathTest {
 		
 		int expectedMax = num2; //expected output
 		int actualMax = Math.max(num1, num2); //actual output
-		
 		assertEquals(expectedMax, actualMax); /** put in expected THEN actual */
 	}
 
