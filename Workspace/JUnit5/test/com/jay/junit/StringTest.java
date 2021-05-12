@@ -1,9 +1,8 @@
-package com.jay.junit5;
+package com.jay.junit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-
 
 /**
  * 
@@ -23,7 +22,7 @@ class StringTest {
 		//this test fails when run as fail is passed "not yet implemented"
 		/** if fail is REMOVED then test is successs. i.e ABSENCE OF FAIL GIVES SUCCESS */
 		// fail comes from: org.junit.jupiter.api.Assertions.*;
-		fail("Not yet implemented");
+		////////////////fail("Not yet implemented");
 		
 		/** checks MUST be implemented for test to be achieved. Checks are called ASSERTIONS. (like fail() above)*/
 		
@@ -40,9 +39,9 @@ class StringTest {
 		/** Example 2 */
 		
 		int length = "ABCD".length();
-		
 		//assert that length == 4. Without this assertion THIS TEST WILL SUCCEED even if .length actually returned 3 for example!
 		
+		
+		
 	}
-
 }
