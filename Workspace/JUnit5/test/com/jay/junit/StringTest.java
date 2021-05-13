@@ -6,6 +6,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
@@ -77,6 +78,8 @@ class StringTest {
 	}
 	
 	@Test
+	/** +++++++++++ DISPLAY NAME - shows this instead of the usual name for the method when run ++++++++++++ */
+	@DisplayName("Im a display name for this method!") 
 	void lengthTest() {
 		
 		int actualLength = "ABCD".length(); //actual output
