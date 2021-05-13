@@ -2,7 +2,9 @@ package com.jay.junit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
@@ -18,6 +20,23 @@ import org.junit.jupiter.api.TestInfo;
  */
 class StringTest {
 	
+	
+	/** this is run before all tests */
+	@BeforeAll
+	static void beforeAll() { /** ++++++++++MUST BE STATIC +++++++++++ */
+		System.out.println("--- this is run before all tests ---");
+		//maybe open a connection to a database here 
+	}
+	
+	/** this is run after all tests */
+	@AfterAll
+	static void afterAll() { /** ++++++++++MUST BE STATIC +++++++++++ */
+		System.out.println("--- this is run after all tests ---");
+		//maybe close a connection to a database here
+	}
+	
+	//--------------------
+	
 	/** this is run before the start of each @Test to set conditions */
 	@BeforeEach //called @Before in jUnit4
 	void beforeEach(TestInfo testInfo) {
@@ -30,6 +49,8 @@ class StringTest {
 	void afterEach(TestInfo testInfo) {
 		System.out.println("do something you'd want to do after: " + testInfo.getDisplayName());
 	}
+	
+	//---------------------
 	
 	
 	@Test //this annotation is what makes this a test method - NOT the method name
