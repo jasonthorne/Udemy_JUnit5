@@ -92,6 +92,19 @@ class StringTest {
 	}
 	
 	
+	/** Testing EXPECTED Exceptions (11. step 9 on course)*/
+	@Test
+	void lengthExceptionTest() {
+		String str = null;
+		
+		//(class of exception your expecting, supplier with code that creates that exception)
+		assertThrows(NullPointerException.class, ()-> {
+			
+			str.length(); /** throws execption */ 
+			// plus more lines if necessary.. (hense body given to lambda!)
+		});
+	}
+	
 	@Test
 	void toUpperCaseTest() {
 		
