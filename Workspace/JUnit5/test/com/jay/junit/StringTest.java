@@ -10,6 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 /**
@@ -156,6 +157,22 @@ class StringTest {
 	void lengthGreaterThanZero(String str) {
 		assertTrue(str.length() >0);
 	}
+	
+	
+	/** +++++++++++++++parameterized test with CSV (comma separated values) source ++++++++  
+	 * NOTE: empty values are counted as NULL so cause fail. so use single quotes like last expected and actual value, shown below */
+	
+	@ParameterizedTest
+	@CsvSource(value= {"ABCD, abcd", "BCD, bcd", "NYAHOI, nyahoi", "'', ''"}) /** 4 sets of expected and actuals */
+	void upperCase(String capitalizedString, String string) {
+		assertEquals(capitalizedString, string.toUpperCase()); //expected, actual
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 	
