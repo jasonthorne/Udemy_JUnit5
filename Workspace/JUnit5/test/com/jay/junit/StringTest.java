@@ -162,7 +162,7 @@ class StringTest {
 	/** +++++++++++++++parameterized test with CSV (comma separated values) source ++++++++  
 	 * NOTE: empty values are counted as NULL so cause fail. so use single quotes like last expected and actual value, shown below */
 	
-	@ParameterizedTest
+	@ParameterizedTest(name = "{1} is capitalised to: {0}") /** ++++++++++++++++++++GIVING A NAME TO PARAMETERIZED TEST +++++++ */
 	@CsvSource(value= {"ABCD, abcd", "BCD, bcd", "NYAHOI, nyahoi", "'', ''"}) /** 4 sets of expected and actuals */
 	void upperCase(String capitalizedString, String string) {
 		assertEquals(capitalizedString, string.toUpperCase()); //expected, actual
