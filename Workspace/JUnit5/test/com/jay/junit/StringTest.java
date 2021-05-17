@@ -2,6 +2,8 @@ package com.jay.junit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.Duration;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -177,9 +179,20 @@ class StringTest {
 		assertEquals(false, false);
 	}
 	
+
+	/** ++++++++++++++Performance testing +++++++++++++ */
 	
-	
-	
+	@Test
+	void performanceTest() {
+		
+		//takes: (duration you want test to run within, thing to test)
+		assertTimeout(Duration.ofSeconds(5), ()->{
+			//thing to test:
+			for(int i=0;i<=10;i++) {
+				System.out.println(i);
+			};
+		});
+	}
 	
 	
 }
