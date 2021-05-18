@@ -8,6 +8,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -25,6 +26,8 @@ import org.junit.jupiter.params.provider.ValueSource;
  * 
  *
  */
+
+// @Disabled //- disables ALL of the tests in this test class 
 class StringTest {
 	
 	
@@ -183,6 +186,7 @@ class StringTest {
 	/** ++++++++++++++Performance testing +++++++++++++ */
 	
 	@Test
+	@Disabled /** ++++++++++++++++++++++Disable test - called @Ignored in junit4 ++++++++++++++++++++*/
 	void performanceTest() {
 		
 		//takes: (duration you want test to run within, thing to test)
