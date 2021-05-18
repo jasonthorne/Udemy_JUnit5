@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
@@ -197,6 +198,38 @@ class StringTest {
 			};
 		});
 	}
+	
+	
+	//+++++++++++++++====================GROUPING TESTS WITH @NESTED ===================+++++++++++++++++++++++++
+	
+	
+	private String myString;
+	
+	@Nested
+	@DisplayName("Tests for an empty string")
+	class EmptyStringTests {
+		
+		//before each test, set string to empty
+		@BeforeEach
+		void setToEmpty() {
+			myString = "";
+		}
+		
+		//test 1:
+		@Test
+		@DisplayName("Length should be zero")
+		void lengthIsZero() {
+			assertEquals(0, myString.length()); //(expected, actual)
+		}
+		
+		//test2: 
+		@Test
+		@DisplayName("uppercase should be empty")
+		void upperCaseIsEmpty() {
+			assertEquals("", myString.toUpperCase()); 
+		}
+	}
+	
 	
 	
 }
