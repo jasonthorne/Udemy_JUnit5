@@ -18,6 +18,23 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+
+
+
+//======================BEST PRACTICES ===============================
+
+/*
+ * 1: Readable - One look at the test should tell what is being tested!
+ * 2: Fast - What happens if the unit test takes too long to run?
+ * 3: Isolated - Fails ONLY when there is an issue with the code
+ * 4: Run Often - What is the use of having unit tests that are not run frequesntly?
+ * 
+ * Recommended further reading: 
+ * xunitpatterns.com
+ * 
+ */
+
+
 /**
  * 
  * 1: make new source folder (test) - ALWAYS SEPERATE TEST CODE FROM PRODUCTION CODE
@@ -229,6 +246,10 @@ class StringTest {
 			assertEquals("", myString.toUpperCase()); 
 		}
 	}
+	
+	
+	
+	
 	
 	
 	
